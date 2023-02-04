@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h2>down keyboard key = a,s,d,f,g,h,j,k,l</h2>
+    <script>
+        document.addEventListener('keydown', function(e){
+
+            console.log(e.keyCode);
+            switch (e.keyCode) {
+                case 65:
+                new Audio('clap.wav').play();
+                    break;
+                case 83:
+                    new Audio('hihat.wav').play();
+                    break;
+                case 68:
+                    new Audio('kick.wav').play();
+                    break;
+                case 70:
+                    new Audio('openhat.wav').play();
+                    break;
+                case 71:
+                    new Audio('boom.wav').play();
+                    break;
+                case 72:
+                    new Audio('ride.wav').play();
+                    break;
+                case 74:
+                    new Audio('snare.wav').play();
+                    break;
+                case 75:
+                    new Audio('tom.wav').play();
+                    break;
+                case 76:
+                    new Audio('tink.wav').play();
+                    break;
+                default:
+                    break;
+            }
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

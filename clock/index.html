@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .clock{
+            width: 40rem;
+            height: 40rem;
+            background-color: rgb(105, 105, 204);
+            position: relative;
+            border-radius: 50%;
+            border: 20px solid rgb(173, 157, 124);
+        }
+        .handle{
+            height: 5px;
+            width: 50%;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            transform-origin: 100%;
+        }
+        .houre{
+            transform: rotate(30deg);
+        }
+    </style>
+</head>
+<body>
+    <section class="clock">
+        <div class="handle" id="houre"></div>
+        <div class="handle" id="min"></div>
+        <div class="handle sec" id="sec"></div>
+
+    </section>
+
+
+
+
+
+    <script>
+        function clock() {
+            var dates = new Date()
+            var sec = dates.getSeconds()
+            document.getElementById("sec").style.transform = `rotate(${(6*sec)+90}deg)`; //-- 360 / 60 = 6; 1 sec = 6 deg [+90 degrees are added to make 12 o'clock]
+            
+            var dates = new Date()
+            var min = dates.getMinutes()
+            document.getElementById("min").style.transform = `rotate(${(6*min)+90}deg)`; //--  360 / 60 = 6; 1 minute = 6 deg
+            
+            var dates = new Date()
+            var houre = dates.getHours()
+            document.getElementById("houre").style.transform = `rotate(${(30*houre)+90}deg)`; //--  360 / 12(houres) = 30; 1 hour = 30 deg
+            
+        }
+        
+        setInterval(clock, 100);
+        </script>
+</body>
+</html>

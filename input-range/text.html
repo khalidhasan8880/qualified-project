@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">0</h1>
+
+    <input type="range" value="0" class="input"  min="0" max="100" onclick="myfunc(this.value)" onmousemove="myfunc(this.value)">
+
+
+    <script>
+        function myfunc(value){
+            document.getElementById('head').innerHTML = value;            
+        }
+    </script>
+</body>
+</html>

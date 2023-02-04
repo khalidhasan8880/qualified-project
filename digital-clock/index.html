@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            color: white;
+            box-sizing: border-box;
+           margin: 0;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           height: 100vh;
+           justify-content: center;
+           background: url("https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?w=900&t=st=1669208446~exp=1669209046~hmac=defc062a8fdb09955cabd634948a20cf88dcbcaf8de8bb2f3ccf217ea3df40dd");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            font-family: Arial, Helvetica, sans-serif;            
+
+        }
+
+        section{
+            width: 50%;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto;
+            grid-gap: 5px;
+            
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            justify-content: center;
+            background-color: rgb(135, 135, 237);
+            font-size: 8.3vw;
+            
+        }
+        .digit{
+            font-weight: bolder;
+                    
+        }
+        .word{
+            font-size: medium;
+            background-color: rgb(113, 169, 169);
+            width: 100%;
+            text-align: center;
+        }
+
+
+        h1{
+            text-align: center;
+            font-size: 6vw;
+            font-size: 5vh;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Digital Clock</h1>
+    <section>        
+        <div>
+            <span class="digit">12</span>
+            <span class="word">Hours</span>
+        </div>
+        <div>
+            <span class="digit">12</span>
+            <span class="word">Minutes</span>
+        </div>
+        <div>
+            <span class="digit">12</span>
+            <span class="word">Second</span>
+        </div>
+    </section>
+
+    <script src="clock.js"></script>
+    
+</body>
+</html>
